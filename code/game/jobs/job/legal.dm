@@ -49,7 +49,6 @@
 
 	access = list(access_prosecutor, access_sec_doors, access_maint_tunnels, access_heads, access_legal, access_warrant)
 	minimal_access = list(access_prosecutor, access_sec_doors, access_heads, access_legal, access_warrant)
-	minimal_player_age = 0
 	minimum_character_age = 28
 
 	alt_titles = list("Prosecutor","Prosecuting Attorney","Prosecution Officer","Prosecuting Lawyer")
