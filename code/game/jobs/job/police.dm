@@ -54,7 +54,7 @@
 	wage = 1750
 	access = list(access_security, access_bodyguard, access_warrant, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_warrant, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 5
+	minimal_player_age = 0
 	minimum_character_age = 28
 
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
@@ -89,7 +89,7 @@
 	wage = 1500
 	synth_wage = 750
 
-	minimal_player_age = 3
+	minimal_player_age = 0
 	minimum_character_age = 25
 
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
@@ -125,7 +125,7 @@
 
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 3
+	minimal_player_age = 0
 	minimum_character_age = 23
 
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
