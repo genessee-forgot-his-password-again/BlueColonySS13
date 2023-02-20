@@ -89,7 +89,6 @@
 	wage = 1500
 	synth_wage = 750
 
-	minimal_player_age = 0
 	minimum_character_age = 25
 
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
@@ -125,7 +124,6 @@
 
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 0
 	minimum_character_age = 23
 
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
