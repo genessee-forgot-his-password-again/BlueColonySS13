@@ -94,7 +94,7 @@
 
 	body_temperature = T20C
 
-	spawn_flags = SPECIES_IS_RESTRICTED | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#34AF10"
