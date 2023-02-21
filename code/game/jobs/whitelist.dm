@@ -125,10 +125,10 @@ var/list/whitelist = list()
 	if(!isnum(C.player_age))
 		return ECONOMIC_CLASS	// if there's no database, or hard player age saves, let's just enable all.
 
-	if(config.upper_class_age < C.player_age)
+	if(config.upper_class_age <= C.player_age)
 		return ECONOMIC_CLASS //60 days unlocks all classes
 
-	else if (config.middle_class_age < C.player_age)
+	else if (config.middle_class_age <= C.player_age)
 		return list(CLASS_WORKING, CLASS_MIDDLE)
 
 	else
