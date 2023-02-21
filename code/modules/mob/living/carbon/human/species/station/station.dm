@@ -40,7 +40,7 @@
 
 /datum/species/unathi
 	name = SPECIES_UNATHI
-	name_plural = "Unathi"
+	name_plural = "Sarathi"
 	icobase = 'icons/mob/human_races/r_lizard.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard.dmi'
 	tail = "sogtail"
@@ -50,10 +50,12 @@
 	darksight = 3
 	ambiguous_genders = TRUE
 	gluttonous = 1
-	slowdown = 0.5
-	total_health = 125
-	brute_mod = 0.85
-	burn_mod = 0.85
+	// shiptest community night changes: unathi should probably be in-line with humans, to be more like shiptest's sarathi
+	slowdown = 1.2 // 0.5
+	total_health = 100 // 1.25
+	brute_mod = 1 // 0.85
+	burn_mod = 1 // 0.85
+	// end of changes
 	metabolic_rate = 0.85
 	item_slowdown_mod = 0.5
 	mob_size = MOB_LARGE
@@ -68,11 +70,12 @@
 	min_age = 32
 	max_age = 260
 
-	blurb = "A heavily reptillian species, Unathi hail from the \
-	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
-	planet, they mostly hold ideals of honesty, virtue, proficiency and bravery above all \
-	else, frequently even their own lives. They prefer warmer temperatures than most species and \
-	their native tongue is a heavy hissing laungage called Sinta'Unathi."
+	blurb = "A heavily reptillian species, Sarathi hail from Kalixcis, \
+	alongside the Elzuosa.<br/><br/>Sarathi highly value self-determination \
+	and living the life one believes is right for themselves. \
+	Often, Sarathi choose names that embody what they want to do or \
+	how they want to live life. \
+	Having evolved alongside the Elzuosa, the two species share much of their culture."
 
 	cold_level_1 = 280 //Default 260 - Lower is better
 	cold_level_2 = 220 //Default 200
@@ -90,7 +93,7 @@
 	breath_heat_level_2 = 530	//Default 450
 	breath_heat_level_3 = 1400	//Default 1250
 
-	minimum_breath_pressure = 18	//Bigger, means they need more air
+	minimum_breath_pressure = 16	//In shiptest lore, sarathi are about the same size as humans
 
 	body_temperature = T20C
 
@@ -118,15 +121,22 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-
-	//No kidneys or appendix
+	// I suspect extra organs got added, so, I'll just be copying human organs for most of these races.
+	// May be wrong (and likely am), but, good to be on the safe side?
 	has_organ = list(
-		O_HEART =    /obj/item/organ/internal/heart/unathi,
-		O_LUNGS =    /obj/item/organ/internal/lungs/unathi,
-		O_LIVER =    /obj/item/organ/internal/liver/unathi,
-		O_BRAIN =    /obj/item/organ/internal/brain/unathi,
-		O_EYES =     /obj/item/organ/internal/eyes,
-		)
+		O_HEART =		/obj/item/organ/internal/heart/unathi,
+		O_LUNGS =		/obj/item/organ/internal/lungs/unathi,
+		O_LIVER =		/obj/item/organ/internal/liver/unathi,
+		O_BRAIN =		/obj/item/organ/internal/brain/unathi,
+		O_EYES =		/obj/item/organ/internal/eyes,
+		O_VOICE = 		/obj/item/organ/internal/voicebox,
+		O_KIDNEYS =		/obj/item/organ/internal/kidneys,
+		O_APPENDIX = 	/obj/item/organ/internal/appendix,
+		O_SPLEEN = 		/obj/item/organ/internal/spleen,
+		O_EYES =		/obj/item/organ/internal/eyes,
+		O_STOMACH =		/obj/item/organ/internal/stomach,
+		O_INTESTINE =	/obj/item/organ/internal/intestine
+	)
 
 
 	heat_discomfort_level = 295

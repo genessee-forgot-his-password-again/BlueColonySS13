@@ -2940,4 +2940,5 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
+#include "shiptest\code\modules\mob\living\carbon\human\species\elzuose.dm"
 // END_INCLUDE

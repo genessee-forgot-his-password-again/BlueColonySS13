@@ -281,14 +281,17 @@
 #define SPECIES_HUMAN_TEEN		"Human Adolescent"
 #define SPECIES_HUMAN_VATBORN	"Baseline Vatborn"
 #define SPECIES_HUMAN_VATBORN_MPL "Mass-Produced Vatborn"
-#define SPECIES_UNATHI			"Unathi"
+#define SPECIES_UNATHI			"Sarathi" // shiptest name
 #define SPECIES_SKRELL			"Skrell"
-#define SPECIES_TESHARI			"Teshari"
+#define SPECIES_TESHARI			"Kepori" // shiptest name
 #define SPECIES_TAJ				"Tajara"
 #define SPECIES_PROMETHEAN		"Promethean"
 #define SPECIES_DIONA			"Diona"
 #define SPECIES_VOX				"Vox"
 #define SPECIES_PRECURSOR		"Precursor"
+// Shiptest species
+#define SPECIES_ETHEREAL		"Elzuose"
+#define SPECIES_MOTH			"Moth"
 
 // Monkey and alien monkeys.
 #define SPECIES_MONKEY			"Monkey"
