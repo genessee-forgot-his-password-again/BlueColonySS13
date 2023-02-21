@@ -402,15 +402,14 @@
 	required_reagents = list("bicaridine" = 1, "iron" = 2, "spidertoxin" = 1)
 	result_amount = 2
 
-//Removed due to aboose.
-/*
+
 /datum/chemical_reaction/hyperzine
 	name = "Hyperzine"
 	id = "hyperzine"
 	result = "hyperzine"
 	required_reagents = list("sugar" = 1, "phosphorus" = 1, "sulfur" = 1)
 	result_amount = 3
-*/
+
 /datum/chemical_reaction/stimm
 	name = "Stimm"
 	id = "stimm"
