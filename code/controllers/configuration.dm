@@ -98,8 +98,8 @@ var/list/gamemode_cache = list()
 	var/disable_player_mice = 0
 	var/uneducated_mice = 0 				//Set to 1 to prevent newly-spawned mice from understanding human speech
 
-	var/middle_class_age = 7 			// How many days a player must be before they can make a middle class character
-	var/upper_class_age = 14 			// How many days a player must be before they can make a upper class character
+	var/middle_class_age = 0 			// How many days a player must be before they can make a middle class character
+	var/upper_class_age = 0 			// How many days a player must be before they can make a upper class character
 
 	var/usealienwhitelist = 0
 	var/limitalienplayers = 0
