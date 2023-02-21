@@ -50,7 +50,7 @@
 	darksight = 3
 	ambiguous_genders = TRUE
 	gluttonous = 1
-	slowdown = 0.5
+	slowdown = 1.6
 	total_health = 125
 	brute_mod = 0.85
 	burn_mod = 0.85
