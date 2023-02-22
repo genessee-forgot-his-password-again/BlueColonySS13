@@ -50,22 +50,20 @@
 	darksight = 3
 	ambiguous_genders = TRUE
 	gluttonous = 1
-	slowdown = 1.6
-	total_health = 125
-	brute_mod = 0.85
-	burn_mod = 0.85
+	total_health = 100
+	brute_mod = 0.9
+	burn_mod = 1.1
 	metabolic_rate = 0.85
-	item_slowdown_mod = 0.5
 	mob_size = MOB_LARGE
-	blood_volume = 840
-	bloodloss_rate = 0.75
+	blood_volume = 600
+	bloodloss_rate = 1
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_UNATHI)
 	name_language = LANGUAGE_UNATHI
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
 
-	min_age = 32
+	min_age = 18
 	max_age = 260
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
