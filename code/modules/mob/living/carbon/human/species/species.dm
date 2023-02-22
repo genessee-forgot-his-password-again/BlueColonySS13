@@ -399,13 +399,6 @@
 	H.glow_color = glow_color
 	H.glow_intensity = glow_intensity
 	H.glow_range = glow_range
-	// BUG: when this proc is called, the player's skin is 0/0/0 - even though this is called after skin color is assigned? Guh?
-	if(glow_uses_skin)
-		H.glow_color = "#[rgb(H.r_skin, H.g_skin, H.b_skin)]"
-	if(hair_uses_skin)
-		H.change_hair_color(H.r_skin, H.g_skin, H.b_skin)
-	// end
-
 
 /datum/species/proc/handle_death(var/mob/living/carbon/human/H) //Handles any species-specific death events (such as dionaea nymph spawns).
 	return
