@@ -49,6 +49,7 @@
 	primitive_form = SPECIES_MONKEY_UNATHI
 	darksight = 3
 	ambiguous_genders = TRUE
+	slowdown = 1.2
 	gluttonous = 1
 	total_health = 100
 	brute_mod = 0.9
