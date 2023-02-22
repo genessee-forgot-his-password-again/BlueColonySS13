@@ -244,6 +244,17 @@
 
 	var/portal_vote_id = "voting_human" // determines voting identification
 
+	// Some shiptest-specific species variables
+	var/hair_alpha = 255 // transparency of hair, 0 is invisible and 255 is opaque
+
+	var/glow_toggle = FALSE // if true, this race emits light naturally
+	var/glow_intensity = null
+	var/glow_range = 0
+	var/glow_color = "#000000"
+
+	var/glow_uses_skin = FALSE // if true, the glow shares the selected skin color
+	var/hair_uses_skin = FALSE // if true, the race's hair is always the same color as their skin
+
 /datum/species/New()
 	if(hud_type)
 		hud = new hud_type()
@@ -382,6 +393,18 @@
 	H.mob_swap_flags = swap_flags
 	H.mob_push_flags = push_flags
 	H.pass_flags = pass_flags
+
+	// shiptest change
+	H.glow_toggle = glow_toggle
+	H.glow_color = glow_color
+	H.glow_intensity = glow_intensity
+	H.glow_range = glow_range
+	// BUG: when this proc is called, the player's skin is 0/0/0 - even though this is called after skin color is assigned? Guh?
+	if(glow_uses_skin)
+		H.glow_color = "#[rgb(H.r_skin, H.g_skin, H.b_skin)]"
+	if(hair_uses_skin)
+		H.change_hair_color(H.r_skin, H.g_skin, H.b_skin)
+	// end
 
 
 /datum/species/proc/handle_death(var/mob/living/carbon/human/H) //Handles any species-specific death events (such as dionaea nymph spawns).

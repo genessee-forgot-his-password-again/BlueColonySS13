@@ -3,9 +3,10 @@
 	name_plural = "Elzuosa"
 	icobase = 'shiptest/icons/mob/species/ethereal/bodyparts.dmi'
 	deform = 'shiptest/icons/mob/species/ethereal/bodyparts.dmi'
+	//TODO: port elzuose tails, horns
 	//tail = "sogtail"
 	//tail_animation = 'icons/mob/species/unathi/tail.dmi'
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
+	unarmed_types = list(/datum/unarmed_attack/stomp/burn, /datum/unarmed_attack/kick/burn, /datum/unarmed_attack/punch/burn, /datum/unarmed_attack/bite/burn)
 	primitive_form = SPECIES_MONKEY // placeholder
 	darksight = 3
 	ambiguous_genders = TRUE
@@ -14,9 +15,10 @@
 	total_health = 100
 	brute_mod = 1.25
 	burn_mod = 1
-	metabolic_rate = 0.85
+	siemens_coefficient = 0.5
+	metabolic_rate = 0.5
 	item_slowdown_mod = 0.5
-	mob_size = MOB_LARGE
+	mob_size = MOB_MEDIUM
 	blood_volume = 840
 	bloodloss_rate = 0.75
 	num_alternate_languages = 3
@@ -24,12 +26,10 @@
 	name_language = LANGUAGE_UNATHI
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 1.5
-
-	blurb = "A heavily reptillian species, Unathi hail from the \
-	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
-	planet, they mostly hold ideals of honesty, virtue, proficiency and bravery above all \
-	else, frequently even their own lives. They prefer warmer temperatures than most species and \
-	their native tongue is a heavy hissing laungage called Sinta'Unathi."
+	blurb = "Elzuosa are an uncommon and unusual species best described as crystalline, electrically-powered plantpeople. \
+	They hail from the warm planet Kalixcis, where they evolved alongside the Sarathi. Kalixcian culture places \
+	no importance on blood-bonds, and those from it tend to consider their family anyone they are sufficiently \
+	close to, and choose their own names.<br><br><b>NOTICE:</b> For the time being, Elzuosa will have to eat regular food rather than electricity. Sorry!"
 
 	cold_level_1 = 280 //Default 260 - Lower is better
 	cold_level_2 = 220 //Default 200
@@ -39,6 +39,7 @@
 	breath_cold_level_2 = 200	//Default 180
 	breath_cold_level_3 = 120	//Default 100
 
+	// funny number!
 	heat_level_1 = 420 //Default 360 - Higher is better
 	heat_level_2 = 480 //Default 400
 	heat_level_3 = 1100 //Default 1000
@@ -47,25 +48,25 @@
 	breath_heat_level_2 = 530	//Default 450
 	breath_heat_level_3 = 1400	//Default 1250
 
-	minimum_breath_pressure = 18	//Bigger, means they need more air
+	minimum_breath_pressure = 16
 
 	body_temperature = T20C
 
 	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	appearance_flags =  HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR // | HAS_HAIR_COLOR | HAS_EYE_COLOR
 
-	flesh_color = "#34AF10"
-	blood_color = "#b3cbc3"
-	base_color = "#066000"
+	flesh_color = "#AFAFAF"
+	blood_color = "#97ee63" // color of liquid electricity
+	base_color = "#AFAFAF"
 
 	reagent_tag = IS_UNATHI
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/claw
 
 	has_limbs = list(
-		BP_TORSO =  list("path" = /obj/item/organ/external/chest/unathi),
-		BP_GROIN =  list("path" = /obj/item/organ/external/groin/unathi),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/unathi),
+		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
+		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -90,3 +91,14 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 	)
+
+
+	hair_alpha = 140 // transparency of hair, 0 is invisible and 255 is opaque
+
+	glow_toggle = TRUE // if true, this race emits light naturally
+	glow_intensity = 1
+	glow_range = 2 // 2 is the lowest possible, not 1. For some reason.
+	glow_color = "#97ee63"
+
+	glow_uses_skin = TRUE // if true, the glow shares the selected skin color
+	hair_uses_skin = TRUE // CURRENTLY UNIMPLEMENTED. if true, the race's hair is always the same color as their skin

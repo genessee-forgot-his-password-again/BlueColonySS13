@@ -136,6 +136,12 @@
 	g_skin = green
 	b_skin = blue
 
+	// shiptest change
+	if(species.hair_uses_skin)
+		change_hair_color(red, green, blue)
+	if(species.glow_uses_skin)
+		glow_color = "[rgb(red, green, blue)]"
+
 	force_update_limbs()
 	update_icons_body()
 	return 1

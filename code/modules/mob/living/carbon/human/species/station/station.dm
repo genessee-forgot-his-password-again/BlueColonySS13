@@ -50,12 +50,12 @@
 	darksight = 3
 	ambiguous_genders = TRUE
 	gluttonous = 1
-	// shiptest community night changes: unathi should probably be in-line with humans, to be more like shiptest's sarathi
+	// shiptest changes: unathi should probably be in-line with humans, to be more like shiptest's sarathi
 	slowdown = 1.2 // 0.5
 	total_health = 100 // 1.25
 	brute_mod = 1 // 0.85
 	burn_mod = 1 // 0.85
-	// end of changes
+	// end
 	metabolic_rate = 0.85
 	item_slowdown_mod = 0.5
 	mob_size = MOB_LARGE
@@ -67,15 +67,16 @@
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
 
-	min_age = 32
-	max_age = 260
+	// shiptest changes
+	min_age = 18
+	max_age = 120
 
-	blurb = "A heavily reptillian species, Sarathi hail from Kalixcis, \
-	alongside the Elzuosa.<br/><br/>Sarathi highly value self-determination \
-	and living the life one believes is right for themselves. \
-	Often, Sarathi choose names that embody what they want to do or \
-	how they want to live life. \
-	Having evolved alongside the Elzuosa, the two species share much of their culture."
+	blurb = "The Sarathi are a cold-blooded reptilian species originating \
+	from the planet Kalixcis, where they evolved alongside the Elzuosa. \
+	Kalixcian culture places no importance on blood-bonds, and those from \
+	it tend to consider their family anyone they are sufficiently close to, \
+	and choose their own names."
+	// end
 
 	cold_level_1 = 280 //Default 260 - Lower is better
 	cold_level_2 = 220 //Default 200
@@ -120,9 +121,9 @@
 		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
-		)
-	// I suspect extra organs got added, so, I'll just be copying human organs for most of these races.
-	// May be wrong (and likely am), but, good to be on the safe side?
+	)
+	// shiptest changes
+	// woe, human organs upon ye
 	has_organ = list(
 		O_HEART =		/obj/item/organ/internal/heart/unathi,
 		O_LUNGS =		/obj/item/organ/internal/lungs/unathi,
@@ -137,7 +138,7 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 	)
-
+	// end
 
 	heat_discomfort_level = 295
 	heat_discomfort_strings = list(
