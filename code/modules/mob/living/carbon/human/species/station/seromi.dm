@@ -43,7 +43,7 @@
 
 	snow_movement = -2	// Ignores light snow
 	total_health = 100
-	brute_mod = 1.1
+	brute_mod = 1.05
 	burn_mod =  1.0
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
