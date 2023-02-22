@@ -40,7 +40,8 @@
 	suit_storage_icon = 'icons/mob/species/seromi/belt_mirror.dmi'
 
 	fire_icon_state = "generic" // Humanoid is too big for them and spriting a new one is really annoying.
-
+	
+	slowdown = 1.2
 	snow_movement = -2	// Ignores light snow
 	total_health = 100
 	brute_mod = 1.05
