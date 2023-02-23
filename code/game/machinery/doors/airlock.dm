@@ -820,6 +820,7 @@ About the new airlock wires panel:
 			if(lights && src.arePowerSystemsOn())
 				lights_overlay = deny_file
 				set_light(0.25, 0.1, 1, 2, COLOR_RED_LIGHT)
+				playsound(src.loc, denied_sound, 50, 0)
 
 		if(AIRLOCK_EMAG)
 			sparks_overlay = emag_file

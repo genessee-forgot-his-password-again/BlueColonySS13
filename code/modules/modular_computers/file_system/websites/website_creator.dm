@@ -4,7 +4,7 @@
 	path = "websites/sitemaker.txt"
 	var/max_websites = 40 //To avoid killing the game.
 	var/name_length_limit = 50 //Massivelongurltotryandcrashpoorcassieserver.co.uk
-	var/max_html_limit = 500 //Change this as you see fit. This is to stop Rshoe from uploading 40 websites with 20,000 lines of POGCHAMP.jpg.
+	var/max_html_limit = 5000 //Change this as you see fit. This is to stop Rshoe from uploading 40 websites with 20,000 lines of POGCHAMP.jpg.
 
 /datum/website/creator/on_access(user)
 	if(GLOB.websites.len >= max_websites)
@@ -30,7 +30,7 @@
 	new_title = sanitize(toname) //let's try to not link your admins to pornhub everytime someone makes a site.
 
 	if(length(new_content) >= max_html_limit) //piss off RSHOE
-		to_chat(user, "You are limited to [max_html_limit] lines of HTML per website on your company's plan. Please try again.")
+		to_chat(user, "You are limited to [max_html_limit] characters of HTML per website on your company's plan. Please try again.")
 		return
 	//Now we're going to do some basic sanitization so you (hopefully) can't just link to an actual virus.
 	new_content = replacetext(new_content, "https://", "{LINK EXPUNGED}")
