@@ -1,23 +1,18 @@
 /datum/species/teshari
 	name = SPECIES_TESHARI
-	name_plural = "Kepori"
-	blurb = "A species covered in feathers, very reminiscient of sol's extinct Troodontidate. \
-	The kepori emerged as one of the largest species on their planet, Teceti, \
-	likely due to the very sparse vegetation.\
-	Due to a runaway greenhouse effect, Teceti was split in half, its equator becoming impassable. \
-	Only relatively recently have the two halves been able to reunite once more. Today, many kepori \
-	still identify with the halves of the planet their family comes from. <br>\
-	Kepori from the north tend to be more isolationist, compared to \
-	the very outgoing southern kepori."
+	name_plural = "Tesharii"
+	blurb = "A race of feathered raptors who developed alongside the Skrell, inhabiting \
+	the polar tundral regions outside of Skrell territory. Extremely fragile, they developed \
+	hunting skills that emphasized taking out their prey without themselves getting hit. They \
+	are only recently becoming known on human stations after reaching space with Skrell assistance."
 
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_SCHECHI)
+	secondary_langs = list(LANGUAGE_SCHECHI, LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SCHECHI
 	species_language = LANGUAGE_SCHECHI
 
-	// normal human age range. no having your age be 12, sorry.
-	min_age = 18
-	max_age = 120
+	min_age = 12
+	max_age = 45
 
 	additional_wage = 6
 
@@ -46,12 +41,11 @@
 
 	fire_icon_state = "generic" // Humanoid is too big for them and spriting a new one is really annoying.
 
-	// 1.2 slowdown is human speed
-	slowdown = 0.9 // was -1. bluecolony was REALLY NOT BUILT for races with -1 slowdown.
+	slowdown = -1
 	snow_movement = -2	// Ignores light snow
-	total_health = 100 // used to be 50, plus 25% more damage from brute/burn. what the fuck. these things would EXPLODE if you look at them funny
-	brute_mod = 1.5 // shiptest value, may need tweaking for the specifics of baymed? unsure.
-	burn_mod =  1.5 // shiptest value
+	total_health = 50
+	brute_mod = 1.35
+	burn_mod =  1.35
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
 	holder_type = /obj/item/weapon/holder/human
@@ -68,36 +62,28 @@
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags = MONKEY|SLIME|SIMPLE_ANIMAL|ALIEN
 
-	// weird that teshari didn't have a different body temperature
-	// maybe there's a reason for that? keep an eye out for kepori players randomly freezing to death
-	body_temperature = 340.15 // Default 310.15
+	cold_level_1 = 180	//Default 260
+	cold_level_2 = 130	//Default 200
+	cold_level_3 = 70	//Default 120
 
-	cold_level_1 = 290	//Default 260
-	cold_level_2 = 230	//Default 200
-	cold_level_3 = 150	//Default 120
+	breath_cold_level_1 = 180	//Default 240 - Lower is better
+	breath_cold_level_2 = 100	//Default 180
+	breath_cold_level_3 = 60	//Default 100
 
-	breath_cold_level_1 = 270	//Default 240 - Lower is better
-	breath_cold_level_2 = 210	//Default 180
-	breath_cold_level_3 = 130	//Default 100
+	heat_level_1 = 320	//Default 360
+	heat_level_2 = 370	//Default 400
+	heat_level_3 = 600	//Default 1000
 
-	heat_level_1 = 390	//Default 360
-	heat_level_2 = 450	//Default 400
-	heat_level_3 = 1100	//Default 1000
-
-	breath_heat_level_1 = 410	//Default 380 - Higher is better
-	breath_heat_level_2 = 480	//Default 450
-	breath_heat_level_3 = 1300	//Default 1250
+	breath_heat_level_1 = 350	//Default 380 - Higher is better
+	breath_heat_level_2 = 400	//Default 450
+	breath_heat_level_3 = 800	//Default 1250
 
 	heat_discomfort_level = 295
 	heat_discomfort_strings = list(
 		"Your feathers prickle in the heat.",
 		"You feel uncomfortably warm.",
-	)
+		)
 	cold_discomfort_level = 180
-	cold_discomfort_strings = list(
-		"You feel the cold biting through your feathers.",
-		"You feel uncomfortably cold.",
-	)
 
 	minimum_breath_pressure = 12	//Smaller, so needs less air
 
@@ -113,7 +99,7 @@
 		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right/seromi),
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/seromi),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/seromi)
-	)
+		)
 
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
@@ -126,7 +112,7 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine,
 		O_SPLEEN = /obj/item/organ/internal/spleen
-	)
+		)
 
 	unarmed_types = list(
 		/datum/unarmed_attack/bite/sharp,
