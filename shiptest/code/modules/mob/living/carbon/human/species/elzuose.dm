@@ -53,7 +53,7 @@
 	body_temperature = T20C
 
 	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags =  HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR // | HAS_HAIR_COLOR | HAS_EYE_COLOR
+	appearance_flags =  HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_HAIR_COLOR // selectable hair colors will be temporary, most likely
 
 	flesh_color = "#AFAFAF"
 	blood_color = "#97ee63" // color of liquid electricity
@@ -66,7 +66,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/elzuose),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -92,6 +92,7 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 	)
 
+	has_glowing_eyes = TRUE
 
 	hair_alpha = 140 // transparency of hair, 0 is invisible and 255 is opaque
 

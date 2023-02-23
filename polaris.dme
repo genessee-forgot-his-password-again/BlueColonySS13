@@ -2942,4 +2942,5 @@
 #include "maps\~map_system\maps.dm"
 #include "shiptest\code\modules\mob\living\carbon\human\species\elzuose.dm"
 #include "shiptest\code\modules\mob\living\carbon\human\species\species_attack.dm"
+#include "shiptest\code\modules\organs\subtypes\elzuose.dm"
 // END_INCLUDE

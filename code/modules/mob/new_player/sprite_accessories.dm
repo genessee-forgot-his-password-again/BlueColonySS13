@@ -29,7 +29,7 @@
 	var/gender = NEUTER
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_ETHEREAL) // todo: SPECIES_MOTH
+	var/list/species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_ETHEREAL)
 
 	// Whether or not the accessory can be affected by colouration
 	var/do_colouration = 1
@@ -1093,7 +1093,7 @@
 */
 
 /datum/sprite_accessory/facial_hair
-	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN)
+	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_ETHEREAL)
 
 
 	icon = 'icons/mob/Human_face.dmi'
