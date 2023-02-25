@@ -53,7 +53,7 @@
 	body_temperature = T20C
 
 	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags =  HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_HAIR_COLOR // selectable hair colors will be temporary, most likely
+	appearance_flags =  HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_HAIR_COLOR | HAS_EYE_COLOR // selectable hair colors will be temporary, most likely
 
 	flesh_color = "#AFAFAF"
 	blood_color = "#97ee63" // color of liquid electricity
