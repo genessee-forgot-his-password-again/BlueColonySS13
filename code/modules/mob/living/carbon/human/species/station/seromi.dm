@@ -12,7 +12,7 @@
 	species_language = LANGUAGE_SCHECHI
 
 	min_age = 12
-	max_age = 45
+	max_age = 60
 
 	additional_wage = 6
 
@@ -40,18 +40,18 @@
 	suit_storage_icon = 'icons/mob/species/seromi/belt_mirror.dmi'
 
 	fire_icon_state = "generic" // Humanoid is too big for them and spriting a new one is really annoying.
-
-	slowdown = -1
+	
+	slowdown = 1.2
 	snow_movement = -2	// Ignores light snow
-	total_health = 50
-	brute_mod = 1.35
-	burn_mod =  1.35
+	total_health = 100
+	brute_mod = 1.05
+	burn_mod =  1.0
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
 	holder_type = /obj/item/weapon/holder/human
 //	short_sighted = 1
 	gluttonous = 1
-	blood_volume = 400
+	blood_volume = 500
 	hunger_factor = 0.2
 
 	ambiguous_genders = TRUE
@@ -82,8 +82,16 @@
 	heat_discomfort_strings = list(
 		"Your feathers prickle in the heat.",
 		"You feel uncomfortably warm.",
+		"Your hands and feet feel hot as your body tries to regulate heat",
 		)
 	cold_discomfort_level = 180
+	cold_discomfort_strings = list(
+		"You feel a bit chilly.",
+		"You fluff up your feathers against the cold.",
+		"You move your arms closer to your body to shield yourself from the cold.",
+		"You press your ears against your head to conserve heat",
+		"You start to feel the cold on your skin",
+		)
 
 	minimum_breath_pressure = 12	//Smaller, so needs less air
 
