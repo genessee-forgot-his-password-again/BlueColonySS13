@@ -139,6 +139,10 @@
 		return
 
 	if (!seeds_initialized)
+		// shiptest change: contents save, but their datums don't, so we need use te add proc to make the machine remember those exist
+		for(var/O in contents)
+			add(O)
+		// end
 		for(var/typepath in starting_seeds)
 			var/amount = starting_seeds[typepath]
 			if(isnull(amount)) amount = 1
