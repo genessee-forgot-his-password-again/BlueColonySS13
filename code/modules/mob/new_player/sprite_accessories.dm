@@ -29,7 +29,7 @@
 	var/gender = NEUTER
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN)
+	var/list/species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_ETHEREAL)
 
 	// Whether or not the accessory can be affected by colouration
 	var/do_colouration = 1
@@ -57,7 +57,7 @@
 		icon_state = "bald"
 		gender = MALE
 		hair_type = HAIR_BALD
-		species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_UNATHI,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_VOX)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_UNATHI,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_VOX,SPECIES_ETHEREAL)
 
 	short
 		name = "Short Hair"	  // try to capatilize the names please~
@@ -255,13 +255,13 @@
 		name = "Bobcurl"
 		icon_state = "hair_bobcurl"
 		hair_type = HAIR_SHORT
-		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_ETHEREAL)
 
 	bob
 		name = "Bob"
 		icon_state = "hair_bobcut"
 		hair_type = HAIR_SHORT
-		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_ETHEREAL)
 
 	bobcutalt
 		name = "Chin Length Bob"
@@ -292,7 +292,7 @@
 		name = "Buzzcut"
 		hair_type = HAIR_BALD
 		icon_state = "hair_buzzcut"
-		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_ETHEREAL)
 
 	shavehair
 		name = "Shaved Hair"
@@ -427,7 +427,7 @@
 		name = "Mohawk"
 		hair_type = HAIR_SHORT
 		icon_state = "hair_d"
-		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_ETHEREAL)
 
 	jensen
 		name = "Adam Jensen Hair"
@@ -452,7 +452,7 @@
 		name = "Spiky"
 		icon_state = "hair_spikey"
 		hair_type = HAIR_SHORT
-		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_ETHEREAL)
 
 	kusangi
 		name = "Kusanagi Hair"
@@ -1093,7 +1093,7 @@
 */
 
 /datum/sprite_accessory/facial_hair
-	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN)
+	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_ETHEREAL)
 
 
 	icon = 'icons/mob/Human_face.dmi'
@@ -1102,7 +1102,7 @@
 		name = "Shaved"
 		icon_state = "bald"
 		gender = NEUTER
-		species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_TAJ,SPECIES_SKRELL, "Machine", SPECIES_TESHARI, SPECIES_TESHARI,SPECIES_PROMETHEAN)
+		species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_CHILD,SPECIES_HUMAN_TEEN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_TAJ,SPECIES_SKRELL, "Machine", SPECIES_TESHARI, SPECIES_TESHARI,SPECIES_PROMETHEAN,SPECIES_ETHEREAL)
 
 	watson
 		name = "Watson Mustache"

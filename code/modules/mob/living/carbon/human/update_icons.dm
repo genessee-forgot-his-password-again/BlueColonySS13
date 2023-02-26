@@ -448,8 +448,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	if(head_organ.nonsolid)
 		face_standing += rgb(,,,120)
-
-	overlays_standing[HAIR_LAYER] = image(face_standing, layer = BODY_LAYER+HAIR_LAYER)
+	// shiptest change, now elzuose can have fancy transparent hair
+	var/image/face_standing_image = image(face_standing, layer = BODY_LAYER+HAIR_LAYER)
+	face_standing_image.alpha = species.hair_alpha
+	overlays_standing[HAIR_LAYER] = face_standing_image
+	// end
 	apply_layer(HAIR_LAYER)
 
 /mob/living/carbon/human/update_eyes()

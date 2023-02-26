@@ -289,6 +289,8 @@
 #define SPECIES_DIONA			"Diona"
 #define SPECIES_VOX				"Vox"
 #define SPECIES_PRECURSOR		"Precursor"
+// Shiptest species
+#define SPECIES_ETHEREAL		"Elzuose"
 
 // Monkey and alien monkeys.
 #define SPECIES_MONKEY			"Monkey"
